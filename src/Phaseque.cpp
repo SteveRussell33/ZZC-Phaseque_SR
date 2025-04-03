@@ -524,9 +524,9 @@ void Phaseque::processIndicators() {
     lights[EXPR_POS_LIGHT].setBrightness(std::max(expr, 0.0f));
     lights[EXPR_NEG_LIGHT].setBrightness(std::max(-expr, 0.0f));
 
-    float curve = outputs[EXPR_CURVE_OUTPUT].getVoltageSum() / 5.f;
-    lights[EXPR_CURVE_POS_LIGHT].setBrightness(std::max(curve, 0.0f));
-    lights[EXPR_CURVE_NEG_LIGHT].setBrightness(std::max(-curve, 0.0f));
+    float ecurve = outputs[EXPR_CURVE_OUTPUT].getVoltageSum() / 5.f;
+    lights[EXPR_CURVE_POS_LIGHT].setBrightness(std::max(ecurve, 0.0f));
+    lights[EXPR_CURVE_NEG_LIGHT].setBrightness(std::max(-ecurve, 0.0f));
 
     float stepPhase = outputs[PHASE_OUTPUT].getVoltageSum() / 5.f;
     lights[PHASE_LIGHT].setBrightness(stepPhase);
