@@ -143,10 +143,10 @@ struct Step {
         this->in_ = i * baseStepLen;
         this->gate = true;
 
-        for (int i = 0; i < STEP_ATTRS_TOTAL; i++) {
-            AttrDefaults defaults = getAttrDefaults(i);
-            this->attrs[i].setup(defaults.defaultValue, defaults.minValue, defaults.maxValue, defaults.mutMult);
-            this->attrs[i].init();
+        for (int j = 0; j < STEP_ATTRS_TOTAL; j++) {
+            AttrDefaults defaults = getAttrDefaults(j);
+            this->attrs[j].setup(defaults.defaultValue, defaults.minValue, defaults.maxValue, defaults.mutMult);
+            this->attrs[j].init();
         }
 
         this->isClean = true;
